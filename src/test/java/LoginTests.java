@@ -7,12 +7,15 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.util.concurrent.TimeUnit;
+
 public class LoginTests {
     WebDriver wd;
     @BeforeTest
     public void prelogin(){
         wd=new ChromeDriver();
 wd.navigate().to("https://telranedu.web.app/home");
+wd.manage().timeouts().implicitlyWait(5, TimeUnit.DAYS);
     }
 
 
@@ -31,6 +34,24 @@ pswinput.clear();
  wd.findElement(By.xpath("//button[1]")).click();
 
         Assert.assertTrue(wd.findElements(By.xpath("//*[.='Sign Out']")).size()>0);
+
+    }
+    @Test
+    public void loginNegEmail(){
+
+        wd.findElement(By.xpath("//*[.='LOGIN']")).click();
+        WebElement emailinput = wd.findElement(By.xpath("//input[1]"));
+        emailinput.click();
+        emailinput.clear();
+        emailinput.sendKeys("hh.ru");
+        WebElement pswinput = wd.findElement(By.xpath("//input[2]"));
+        pswinput.click();
+        pswinput.clear();
+        pswinput.sendKeys("Sd@aswx11");
+
+
+
+
 
     }
 
