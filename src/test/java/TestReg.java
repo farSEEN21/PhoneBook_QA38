@@ -8,20 +8,20 @@ import org.testng.annotations.BeforeTest;
 
 import java.util.concurrent.TimeUnit;
 
-public class TestReg {
+public class TestReg extends TestBase{
 
 
     WebDriver wd;
 
 
     public class LoginTests {
-        WebDriver wd;
+//        WebDriver wd;
 
         @BeforeTest
         public void prelogin() {
-            wd = new ChromeDriver();
-            wd.navigate().to("https://telranedu.web.app/home");
-            wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+//            wd = new ChromeDriver();
+//            wd.navigate().to("https://telranedu.web.app/home");
+//            wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         }
 
         public void regPositiv() {
@@ -39,9 +39,9 @@ public class TestReg {
             pswinput.sendKeys("Sd@aswx11");
 
             wd.findElement(By.xpath("//button[2]")).click();
-
+pause(50000);
             Assert.assertTrue(wd.findElements(By.xpath("//*[.='Sign Out']")).size() > 0);
-
+//Assert.assertTrue(is);
         }
 
 

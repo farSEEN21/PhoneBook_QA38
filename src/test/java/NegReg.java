@@ -16,7 +16,8 @@ public class NegReg {
     public void intial(){
         wd = new ChromeDriver();
         wd.navigate().to("https://telranedu.web.app/home");
-        wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        wd.manage().window().maximize();
+                wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
     @Test
     public void NegTestWithOut2 (){
@@ -27,7 +28,7 @@ public class NegReg {
         WebElement emailinput = wd.findElement(By.xpath("//input[1]"));
         emailinput.click();
         emailinput.clear();
-        emailinput.sendKeys("h1'+i+'h.ru");
+        emailinput.sendKeys("h1"+i+"h.ru");
 
         WebElement pswinput = wd.findElement(By.xpath("//input[2]"));
         pswinput.click();
@@ -35,7 +36,8 @@ public class NegReg {
         pswinput.sendKeys("Sd@aswx11");
 
         wd.findElement(By.xpath("//button[2]")).click();
-      //  wd.close();
+      // firebase
+        // wd.close();
 
     }
 
