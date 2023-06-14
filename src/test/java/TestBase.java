@@ -1,7 +1,10 @@
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
@@ -18,7 +21,7 @@ public class TestBase {
     public void init() {
         wd = new ChromeDriver();
         wd.navigate().to("https://telranedu.web.app/home");
-      //  wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        //  wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
 
@@ -61,11 +64,20 @@ public class TestBase {
         type(By.xpath("//input[2]"), psw);
 
     }
-public void submitReg(){
-        click(By.xpath("//button[2]"));
-}
-public boolean isElementPresent(By locator){
-    return wd.findElements(locator).size() > 0;
 
-}
+    public void submitReg() {
+        click(By.xpath("//button[2]"));
+    }
+
+    public boolean isElementPresent(By locator) {
+        return wd.findElements(locator).size() > 0;
+
+    }
+
+    public void isElementAlert() {
+        WebDriverWait wait = new WebDriverWait(wd, 15);
+        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+        String text = alert.getText();
+        alert.accept();
+    }
 }
