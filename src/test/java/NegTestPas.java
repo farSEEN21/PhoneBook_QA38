@@ -1,7 +1,7 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class NegTestPas extends TestBase {
+public class NegTestPas extends TestBase1 {
 
     @Test
     public void registNegWrongEmail2() {
