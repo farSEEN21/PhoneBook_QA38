@@ -22,7 +22,7 @@ public class Task3 {
     @Test
     public void findEl(){
         System.out.println( wd.findElement(By.cssSelector("li[class='first'] a:nth-of-type(1)")).getText());
- 
+
     }
 
 }
