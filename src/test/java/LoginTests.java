@@ -9,14 +9,14 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class LoginTests {
+public class LoginTests extends TestBase{
     WebDriver wd;
-    @BeforeTest
-    public void prelogin(){
-        wd=new ChromeDriver();
-wd.navigate().to("https://telranedu.web.app/home");
-wd.manage().timeouts().implicitlyWait(5, TimeUnit.DAYS);
-    }
+//    @BeforeTest
+//    public void prelogin(){
+//        wd=new ChromeDriver();
+//wd.navigate().to("https://telranedu.web.app/home");
+//wd.manage().timeouts().implicitlyWait(5, TimeUnit.DAYS);
+//    }
 
 
     @Test
@@ -58,27 +58,39 @@ pswinput.clear();
 
 
    @AfterTest
- public void tears() throws InterruptedException {
+ public void tears() {
        // wd.wait(50);
-        wd.quit();}
-
+//        wd.quit();}
+   }
 
     public static class NegTestPas   {
 
-        @Test
-        public void registNegWrongEmail2() {
-            int i = (int) (System.currentTimeMillis() / 1000) / 3600;
-
-            String email = "abc"+i+"kdf.ru",
-            psw = "DJS@sda1";
+//        @Test
+//        public void registNegWrongEmail2() {
+//            int i = (int) (System.currentTimeMillis() / 1000) / 3600;
+//
+//            String email = "abc"+i+"kdf.ru",
+//            psw = "DJS@sda1";
 //            openLoginForm();
 //            FillForm(email, psw);
 //
 //            submitReg();
 //           // Assert.assertTrue(isElementPresent("//Button1"));
-
-        }
+//
+//        }
 
 
     }
+
+    @Test
+    public void NegLogin(){
+
+        init();
+        openLoginForm();
+        FillForm("h@h.ru","osdao");
+        submitlog();
+        isElementAlert();
+    }
+
+
 }

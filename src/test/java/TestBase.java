@@ -68,7 +68,9 @@ public class TestBase {
     public void submitReg() {
         click(By.xpath("//button[2]"));
     }
-
+    public void submitlog() {
+        click(By.xpath("//button[1]"));
+    }
     public boolean isElementPresent(By locator) {
         return wd.findElements(locator).size() > 0;
 
