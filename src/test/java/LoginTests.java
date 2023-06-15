@@ -90,6 +90,7 @@ pswinput.clear();
         FillForm("h@h.ru","osdao");
         submitlog();
         isElementAlert();
+        pause(5000);
     }
 
 
