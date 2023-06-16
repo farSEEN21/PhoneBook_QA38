@@ -1,14 +1,12 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import tests.TestBase;
 
-import java.util.concurrent.TimeUnit;
-
-public class TestReg extends TestBase{
+public class TestReg extends TestBase {
 
 
     WebDriver wd;
@@ -39,7 +37,7 @@ public class TestReg extends TestBase{
             pswinput.sendKeys("Sd@aswx11");
 
             wd.findElement(By.xpath("//button[2]")).click();
-pause(50000);
+//pause(50000);
             Assert.assertTrue(wd.findElements(By.xpath("//*[.='Sign Out']")).size() > 0);
 //Assert.assertTrue(is);
         }
