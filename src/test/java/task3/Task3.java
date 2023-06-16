@@ -15,14 +15,14 @@ public class Task3 {
     public void pretest() {
         wd = new ChromeDriver();
         wd.manage().window().maximize();
-        wd.manage().timeouts().implicitlyWait    (5, TimeUnit.SECONDS);
+        wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         wd.get("http://www.leumi.co.il");
     }
 
     @Test
-    public void findEl(){
-        System.out.println( wd.findElement(By.cssSelector("li[class='first'] a:nth-of-type(1)")).getText());
+    public void findEl() {
+        System.out.println(wd.findElement(By.cssSelector("li[class='first'] a:nth-of-type(1)")).getText());
+                         }
 
-    }
 
 }

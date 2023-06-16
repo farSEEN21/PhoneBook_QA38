@@ -82,4 +82,10 @@ public class TestBase {
         String text = alert.getText();
         alert.accept();
     }
+    public void logout(){
+        click(By.xpath("//*[.='Sign Out']"));
+    }
+    public boolean areLogin(){
+        return isElementPresent(By.xpath("//*[.='Sign Out']"));
+    }
 }

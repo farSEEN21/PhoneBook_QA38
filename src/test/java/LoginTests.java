@@ -10,7 +10,17 @@ import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
 public class LoginTests extends TestBase{
-    WebDriver wd;
+
+
+
+    @BeforeTest
+    public void precon(){
+        if (areLogin()){
+            logout();
+        }
+
+    }
+
 //    @BeforeTest
 //    public void prelogin(){
 //        wd=new ChromeDriver();
@@ -21,7 +31,9 @@ public class LoginTests extends TestBase{
 
     @Test
     public void loginPositiv(){
-wd.findElement(By.xpath("//*[.='LOGIN']")).click();
+
+      //  wd.findElement(By.xpath("//*[.='LOGIN']")).click();
+       openLoginForm();
         WebElement emailinput = wd.findElement(By.xpath("//input[1]"));
 emailinput.click();
 emailinput.clear();
@@ -32,28 +44,28 @@ pswinput.clear();
  pswinput.sendKeys("Sd@aswx11");
 
  wd.findElement(By.xpath("//button[1]")).click();
-
+        pause(5000);
         Assert.assertTrue(wd.findElements(By.xpath("//*[.='Sign Out']")).size()>0);
 
     }
-    @Test
-    public void loginNegEmail(){
-
-        wd.findElement(By.xpath("//*[.='LOGIN']")).click();
-        WebElement emailinput = wd.findElement(By.xpath("//input[1]"));
-        emailinput.click();
-        emailinput.clear();
-        emailinput.sendKeys("hh.ru");
-        WebElement pswinput = wd.findElement(By.xpath("//input[2]"));
-        pswinput.click();
-        pswinput.clear();
-        pswinput.sendKeys("Sd@aswx11");
-
-
-
-
-
-    }
+//    @Test
+//    public void loginNegEmail(){
+//
+//        wd.findElement(By.xpath("//*[.='LOGIN']")).click();
+//        WebElement emailinput = wd.findElement(By.xpath("//input[1]"));
+//        emailinput.click();
+//        emailinput.clear();
+//        emailinput.sendKeys("hh.ru");
+//        WebElement pswinput = wd.findElement(By.xpath("//input[2]"));
+//        pswinput.click();
+//        pswinput.clear();
+//        pswinput.sendKeys("Sd@aswx11");
+//
+//
+//
+//
+//
+//    }
 
 
 
@@ -82,16 +94,27 @@ pswinput.clear();
 
     }
 
-    @Test
-    public void NegLogin(){
+//    @Test
+//    public void NegLogin(){
+//
+//       // init();
+//        openLoginForm();
+//        FillForm("h@h.ru","osdao");
+//        submitlog();
+//        isElementAlert();
+//        pause(5000);
+//    }
 
-        init();
-        openLoginForm();
-        FillForm("h@h.ru","osdao");
-        submitlog();
-        isElementAlert();
-        pause(5000);
-    }
+@Test
+    public void LoginPositTestBase(){
+    openLoginForm();
+    FillForm("a@a1.ru","DJS@sda1");
+    submitlog();
+    pause(5000);
+    Assert.assertTrue(wd.findElements(By.xpath("//*[.='Sign Out']")).size() > 0);
 
+    pause(5000);
+}
 
 }
+
