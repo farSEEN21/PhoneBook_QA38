@@ -111,7 +111,7 @@ public class LoginTests extends TestBase{
     app.getUsers().FillForm("a@a1.ru","DJS@sda1");
     app.getUsers().    submitlog();
     app.getUsers().pause(5000);
-//    Assert.assertTrue(wd.findElements(By.xpath("//*[.='Sign Out']")).size() > 0);
+
         Assert.assertTrue(app.getUsers().isElementPresent(By.xpath("//*[.='Sign Out']")));
         app.getUsers().pause(5000);
 }
