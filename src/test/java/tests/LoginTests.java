@@ -1,5 +1,6 @@
 package tests;
 
+import model.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -7,14 +8,12 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class LoginTests extends TestBase{
-
+public class LoginTests extends TestBase {
 
 
     @BeforeMethod
-    public void precon(){
-        if (app.getUsers().areLogin())
-        {
+    public void precon() {
+        if (app.getUsers().areLogin()) {
             app.getUsers().logout();
         }
 
@@ -67,7 +66,6 @@ public class LoginTests extends TestBase{
 //    }
 
 
-
 //   @AfterTest
 // public void tears()
 //   {
@@ -105,16 +103,26 @@ public class LoginTests extends TestBase{
 //        pause(5000);
 //    }
 
-@Test
-    public void LoginPositTestBase(){
-    app.getUsers().openLoginForm();
-    app.getUsers().FillForm("a@a1.ru","DJS@sda1");
-    app.getUsers().    submitlog();
-    app.getUsers().pause(5000);
+//    @Test
+//    public void LoginPositTestBase(){
+//    app.getUsers().openLoginForm();
+//    app.getUsers().FillForm("a@a1.ru","DJS@sda1");
+//    app.getUsers().    submitlog();
+//    app.getUsers().pause(5000);
+//
+//        Assert.assertTrue(app.getUsers().isElementPresent(By.xpath("//*[.='Sign Out']")));
+//        app.getUsers().pause(5000);}
+    @Test
+    public void LoginPositTestBase() {
+        User user = new User().withEmail("a@a1.ru").withPsw("DJS@sda1");
+        app.getUsers().openLoginForm();
+        app.getUsers().FillForm(user);
+        app.getUsers().submitlog();
+        app.getUsers().pause(5000);
 
         Assert.assertTrue(app.getUsers().isElementPresent(By.xpath("//*[.='Sign Out']")));
         app.getUsers().pause(5000);
+    }
 }
 
-}
 
