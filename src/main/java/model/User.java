@@ -4,10 +4,7 @@ public class User {
     String email;
     String psw;
 
-//    public User(String email, String psw) {
-//        this.email = email;
-//        this.psw = psw;
-//    }
+
 
     public String getEmail() {
         return email;
