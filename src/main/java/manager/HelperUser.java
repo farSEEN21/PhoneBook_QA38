@@ -1,6 +1,7 @@
 package manager;
 
 import model.User;
+import model.UserLombok;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -21,7 +22,13 @@ public class HelperUser extends HelperBase{
         type(By.xpath("//input[2]"), psw);
 
     }
-    public void FillForm(User user)
+    public void FillForm(UserLombok user)
+    {
+
+        type(By.xpath("//input[1]"), user.getEmail());
+        type(By.xpath("//input[2]"), user.getPsw());
+
+    }   public void FillForm(User user)
     {
 
         type(By.xpath("//input[1]"), user.getEmail());

@@ -1,6 +1,7 @@
 package tests;
 
 import model.User;
+import model.UserLombok;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -117,6 +118,16 @@ public class LoginTests extends TestBase {
         User user = new User().withEmail("a@a1.ru").withPsw("DJS@sda1");
         app.getUsers().openLoginForm();
         app.getUsers().FillForm(user);
+        app.getUsers().submitlog();
+        app.getUsers().pause(5000);
+
+        Assert.assertTrue(app.getUsers().isElementPresent(By.xpath("//*[.='Sign Out']")));
+        app.getUsers().pause(5000);
+    }    @Test
+    public void LoginPositTestBaseLombok() {
+        UserLombok userLom = UserLombok.builder().email("a@a1.ru").psw("DJS@sda1").build();
+        app.getUsers().openLoginForm();
+        app.getUsers().FillForm(userLom);
         app.getUsers().submitlog();
         app.getUsers().pause(5000);
 
