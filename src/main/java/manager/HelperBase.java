@@ -42,10 +42,5 @@ WebDriver wd;
     }
 
 
-    public void isElementAlert() {
-        WebDriverWait wait = new WebDriverWait(wd, 15);
-        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-        String text = alert.getText();
-        alert.accept();
-    }
+
     }

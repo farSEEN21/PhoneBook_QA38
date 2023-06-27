@@ -2,8 +2,11 @@ package manager;
 
 import model.User;
 import model.UserLombok;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HelperUser extends HelperBase{
 
@@ -49,4 +52,26 @@ public class HelperUser extends HelperBase{
     public boolean areLogin(){
         return isElementPresent(By.xpath("//*[.='Sign Out']"));
     }
+
+    public boolean isAlertPresent() {
+        //var 1
+//        WebDriverWait wait = new WebDriverWait(wd, 15);
+//        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+//        String text = alert.getText();
+//        alert.accept();
+        // var 2
+        Alert alert =new WebDriverWait(wd,10).until(ExpectedConditions.alertIsPresent());
+        if (alert==null) return false;
+        wd.switchTo().alert();
+
+                alert.accept();
+                return true;
+
+    }
+public boolean isWrongFormatMessage(){
+    Alert alert =new WebDriverWait(wd,10).until(ExpectedConditions.alertIsPresent());
+    return alert.getText().contains("Wrong email or password ");
+}
+
+
 }
