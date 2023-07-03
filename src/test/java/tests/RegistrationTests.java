@@ -1,8 +1,10 @@
 package tests;
 
+import manager.TestNGListener;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
+@Listeners(TestNGListener.class)
 public class RegistrationTests extends TestBase {
 
 
@@ -17,7 +19,7 @@ public class RegistrationTests extends TestBase {
         app.getUsers().pause(500);
     Assert.assertTrue(app.getUsers().isWrongFormatMessage());
         Assert.assertTrue(app.getUsers().isAlertPresent());
-        
+
 
 
     }

@@ -1,0 +1,14 @@
+12:28:49  INFO  tests.TestBase - negTestPswis started
+12:28:49  INFO  manager.TestNGListener - Test null started
+12:28:49  INFO  manager.WDListener - Start searching element by --->By.xpath: //*[.='Sign Out']
+12:28:54  INFO  manager.WDListener - find element with --->By.xpath: //*[.='Sign Out']is found
+12:28:54  INFO  manager.WDListener - Start searching element by --->By.xpath: //*[.='LOGIN']
+12:28:54  INFO  manager.WDListener - find element with --->By.xpath: //*[.='LOGIN']is found
+12:28:54  INFO  manager.WDListener - Start searching element by --->By.xpath: //input[1]
+12:28:54  INFO  manager.WDListener - find element with --->By.xpath: //input[1]is found
+12:28:55  INFO  manager.WDListener - Start searching element by --->By.xpath: //input[2]
+12:28:55  INFO  manager.WDListener - find element with --->By.xpath: //input[2]is found
+12:28:55  INFO  manager.WDListener - Start searching element by --->By.xpath: //button[2]
+12:28:55  INFO  manager.WDListener - find element with --->By.xpath: //button[2]is found
+12:28:56  INFO  manager.TestNGListener - Test null successfull
+12:28:56  INFO  tests.TestBase - ++++++++++==========================++++++++++++++++++++++++++++

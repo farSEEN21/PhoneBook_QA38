@@ -1,11 +1,18 @@
 package tests;
 
 import manager.ApplicationManger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
-public class TestBase {
+import java.lang.reflect.Method;
 
+public class TestBase {
+    Logger logger= LoggerFactory.getLogger(TestBase.class);
+    static ApplicationManger app= new ApplicationManger();
 
 //    WebDriver wd;
 //
@@ -19,8 +26,100 @@ app.init();
  public void stop(){
         app.tears();
     }
+@BeforeMethod
+    public void startLogger(Method method){
+        logger.info(method.getName()+"is started");
+}
 
-   static ApplicationManger app= new ApplicationManger();
+@AfterMethod
+    public void end(){
+
+        logger.info("++++++++++==========================++++++++++++++++++++++++++++");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
 
 
 

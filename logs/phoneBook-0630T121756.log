@@ -1,0 +1,14 @@
+12:18:00  INFO  tests.TestBase - LoginPositTestBaseis started
+12:18:00  INFO  manager.WDListener - Start searching element by --->By.xpath: //*[.='Sign Out']
+12:18:05  INFO  manager.WDListener - find element with --->By.xpath: //*[.='Sign Out']is found
+12:18:05  INFO  manager.WDListener - Start searching element by --->By.xpath: //*[.='LOGIN']
+12:18:05  INFO  manager.WDListener - find element with --->By.xpath: //*[.='LOGIN']is found
+12:18:05  INFO  manager.WDListener - Start searching element by --->By.xpath: //input[1]
+12:18:05  INFO  manager.WDListener - find element with --->By.xpath: //input[1]is found
+12:18:06  INFO  manager.WDListener - Start searching element by --->By.xpath: //input[2]
+12:18:06  INFO  manager.WDListener - find element with --->By.xpath: //input[2]is found
+12:18:06  INFO  manager.WDListener - Start searching element by --->By.xpath: //button[1]
+12:18:06  INFO  manager.WDListener - find element with --->By.xpath: //button[1]is found
+12:18:11  INFO  manager.WDListener - Start searching element by --->By.xpath: //*[.='Sign Out']
+12:18:11  INFO  manager.WDListener - find element with --->By.xpath: //*[.='Sign Out']is found
+12:18:16  INFO  tests.TestBase - ++++++++++==========================++++++++++++++++++++++++++++

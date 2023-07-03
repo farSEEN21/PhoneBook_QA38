@@ -1,0 +1,27 @@
+12:11:41  INFO  tests.TestBase - LoginPositTestBaseis started
+12:11:41  INFO  manager.WDListener - Start searching element by --->By.xpath: //*[.='Sign Out']
+12:11:46  INFO  manager.WDListener - find element with --->By.xpath: //*[.='Sign Out']is found
+12:11:46  INFO  manager.WDListener - Start searching element by --->By.xpath: //*[.='LOGIN']
+12:11:46  INFO  manager.WDListener - find element with --->By.xpath: //*[.='LOGIN']is found
+12:11:46  INFO  manager.WDListener - Start searching element by --->By.xpath: //input[1]
+12:11:46  INFO  manager.WDListener - find element with --->By.xpath: //input[1]is found
+12:11:47  INFO  manager.WDListener - Start searching element by --->By.xpath: //input[3]
+12:11:52  INFO  manager.WDListener - Something went wrongno such element: Unable to locate element: {"method":"xpath","selector":"//input[3]"}
+  (Session info: chrome=114.0.5735.134)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SASHA', ip: '192.168.252.178', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_333'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\BLUVG_~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51256}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7f3f308a72b75f608a71c7d5160c74cc
+*** Element info: {Using=xpath, value=//input[3]}org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[3]"}
+  (Session info: chrome=114.0.5735.134)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SASHA', ip: '192.168.252.178', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_333'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\BLUVG_~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51256}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7f3f308a72b75f608a71c7d5160c74cc
+*** Element info: {Using=xpath, value=//input[3]}
+12:11:52  INFO  manager.WDListener - THis is a link to a Screenshot with error----->src/test/screenshots/screen-712.png
+12:11:52  INFO  tests.TestBase - ++++++++++==========================++++++++++++++++++++++++++++
