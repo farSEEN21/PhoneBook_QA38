@@ -49,7 +49,7 @@ public class HelperUser extends HelperBase{
     public void logout(){
         click(By.xpath("//*[.='Sign Out']"));
     }
-    public boolean areLogin(){
+    public boolean isLogin(){
         return isElementPresent(By.xpath("//*[.='Sign Out']"));
     }
 

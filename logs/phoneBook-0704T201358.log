@@ -1,0 +1,28 @@
+20:14:02  INFO  tests.TestBase - addNewContactPositivis started
+20:14:02  INFO  manager.WDListener - Start searching element by --->By.xpath: //*[.='Sign Out']
+20:14:07  INFO  manager.WDListener - find element with --->By.xpath: //*[.='Sign Out']is found
+20:14:07  INFO  manager.WDListener - Start searching element by --->By.xpath: //*[.='LOGIN']
+20:14:07  INFO  manager.WDListener - find element with --->By.xpath: //*[.='LOGIN']is found
+20:14:07  INFO  manager.WDListener - Start searching element by --->By.xpath: //input[1]
+20:14:08  INFO  manager.WDListener - find element with --->By.xpath: //input[1]is found
+20:14:08  INFO  manager.WDListener - Start searching element by --->By.xpath: //input[2]
+20:14:08  INFO  manager.WDListener - find element with --->By.xpath: //input[2]is found
+20:14:08  INFO  manager.WDListener - Start searching element by --->By.xpath: //button[1]
+20:14:08  INFO  manager.WDListener - find element with --->By.xpath: //button[1]is found
+20:14:13  INFO  manager.WDListener - Start searching element by --->By.xpath: //*[.='ADD']
+20:14:13  INFO  manager.WDListener - find element with --->By.xpath: //*[.='ADD']is found
+20:14:13  INFO  manager.WDListener - Start searching element by --->By.xpath: //input[@placeholder='Name']
+20:14:13  INFO  manager.WDListener - find element with --->By.xpath: //input[@placeholder='Name']is found
+20:14:13  INFO  manager.WDListener - Start searching element by --->By.xpath: //input[@placeholder='Last Name']
+20:14:13  INFO  manager.WDListener - find element with --->By.xpath: //input[@placeholder='Last Name']is found
+20:14:14  INFO  manager.WDListener - Start searching element by --->By.xpath: //input[@placeholder='Phone']
+20:14:14  INFO  manager.WDListener - find element with --->By.xpath: //input[@placeholder='Phone']is found
+20:14:14  INFO  manager.WDListener - Start searching element by --->By.xpath: //input[@placeholder='email']
+20:14:14  INFO  manager.WDListener - find element with --->By.xpath: //input[@placeholder='email']is found
+20:14:14  INFO  manager.WDListener - Start searching element by --->By.xpath: //input[@placeholder='Address']
+20:14:14  INFO  manager.WDListener - find element with --->By.xpath: //input[@placeholder='Address']is found
+20:14:14  INFO  manager.WDListener - Start searching element by --->By.xpath: //button[.='Save']
+20:14:14  INFO  manager.WDListener - find element with --->By.xpath: //button[.='Save']is found
+20:14:14  INFO  manager.WDListener - Start searching element by --->By.xpath: //div[@class='contact-item_card__2SOIM'][last()]//h3
+20:14:15  INFO  manager.WDListener - find element with --->By.xpath: //div[@class='contact-item_card__2SOIM'][last()]//h3is found
+20:14:15  INFO  tests.TestBase - ++++++++++==========================++++++++++++++++++++++++++++

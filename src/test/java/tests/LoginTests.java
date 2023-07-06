@@ -1,5 +1,6 @@
 package tests;
 
+import manager.TestNGListener;
 import model.User;
 import model.UserLombok;
 import org.openqa.selenium.By;
@@ -7,14 +8,15 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
+@Listeners(TestNGListener.class)
 public class LoginTests extends TestBase {
 
 
     @BeforeMethod
     public void precon() {
-        if (app.getUsers().areLogin()) {
+        if (app.getUsers().isLogin()) {
             app.getUsers().logout();
         }
 

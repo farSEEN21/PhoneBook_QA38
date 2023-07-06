@@ -1,0 +1,20 @@
+17:33:14  INFO  tests.TestBase - removeContactis started
+17:33:14  INFO  manager.WDListener - Start searching element by --->By.xpath: //*[.='Sign Out']
+17:33:19  INFO  manager.WDListener - find element with --->By.xpath: //*[.='Sign Out']is found
+17:33:19  INFO  manager.WDListener - Start searching element by --->By.xpath: //*[.='LOGIN']
+17:33:19  INFO  manager.WDListener - find element with --->By.xpath: //*[.='LOGIN']is found
+17:33:19  INFO  manager.WDListener - Start searching element by --->By.xpath: //input[1]
+17:33:19  INFO  manager.WDListener - find element with --->By.xpath: //input[1]is found
+17:33:20  INFO  manager.WDListener - Start searching element by --->By.xpath: //input[2]
+17:33:20  INFO  manager.WDListener - find element with --->By.xpath: //input[2]is found
+17:33:20  INFO  manager.WDListener - Start searching element by --->By.xpath: //button[1]
+17:33:20  INFO  manager.WDListener - find element with --->By.xpath: //button[1]is found
+17:33:25  INFO  manager.WDListener - Start searching element by --->By.xpath: //div[@class='contact-item_card__2SOIM'][last()]//h3
+17:33:25  INFO  manager.WDListener - find element with --->By.xpath: //div[@class='contact-item_card__2SOIM'][last()]//h3is found
+17:33:25  INFO  manager.WDListener - Start searching element by --->By.xpath: //div[@class='contact-item_card__2SOIM'][last()]
+17:33:25  INFO  manager.WDListener - find element with --->By.xpath: //div[@class='contact-item_card__2SOIM'][last()]is found
+17:33:25  INFO  manager.WDListener - Start searching element by --->By.xpath: //button[normalize-space()='Remove']
+17:33:25  INFO  manager.WDListener - find element with --->By.xpath: //button[normalize-space()='Remove']is found
+17:33:25  INFO  manager.WDListener - Start searching element by --->By.xpath: //div[@class='contact-item_card__2SOIM'][last()]//h3
+17:33:25  INFO  manager.WDListener - find element with --->By.xpath: //div[@class='contact-item_card__2SOIM'][last()]//h3is found
+17:33:25  INFO  tests.TestBase - ++++++++++==========================++++++++++++++++++++++++++++
