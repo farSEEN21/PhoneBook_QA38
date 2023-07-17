@@ -1,6 +1,8 @@
 package tests;
 
+import manager.ProvideData;
 import model.Contact;
+import model.User;
 import model.UserLombok;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +14,7 @@ public class AddNewContactTests extends TestBase {
 Logger logger= LoggerFactory.getLogger(AddNewContactTests.class);
 
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void precondition() {
         if (!app.getUsers().isLogin()) {
             UserLombok userLom = UserLombok.builder().email("a@a1.ru").psw("DJS@sda1").build();
@@ -23,7 +25,7 @@ Logger logger= LoggerFactory.getLogger(AddNewContactTests.class);
         }
     }
 
-    @Test(invocationCount = 5)
+    @Test(invocationCount = 2, groups = {"positive"})
     public void addNewContactPositiv() {
         int i = (int) (System.currentTimeMillis() / 1000) % 3600;
         Contact contact = Contact.builder()

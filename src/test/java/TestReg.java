@@ -15,7 +15,7 @@ public class TestReg extends TestBase {
     public class LoginTests {
 //        WebDriver wd;
 
-        @BeforeTest
+        @BeforeTest(alwaysRun = true)
         public void prelogin() {
 //            wd = new ChromeDriver();
 //            wd.navigate().to("https://telranedu.web.app/home");
@@ -43,13 +43,7 @@ public class TestReg extends TestBase {
         }
 
 
-
-
-
-
-
-
-        @AfterTest
+        @AfterTest(alwaysRun = true)
         public void tears() {
 
             wd.quit();

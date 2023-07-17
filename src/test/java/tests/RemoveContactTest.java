@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class RemoveContactTest extends TestBase {
     Logger logger= LoggerFactory.getLogger(AddNewContactTests.class);
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void precondition() {
         if (!app.getUsers().isLogin()) {
             UserLombok userLom = UserLombok.builder().email("a@a1.ru").psw("DJS@sda1").build();
@@ -31,5 +31,18 @@ public class RemoveContactTest extends TestBase {
         System.out.println("result = "+i+"-"+z);
         Assert.assertEquals(i-1,z);
     }
+@Test
+    public void removeoneContactPot(){
+        app.getHelperContact().removeOneContact();
+        Assert.assertEquals( app.getHelperContact().removeOneContact() ,-1);
+}
+
+
+@Test
+    public void removeallContactPosit(){
+    app.getHelperContact().removeAllContacts();
+    Assert.assertTrue( app.getHelperContact().isContact());
+}
+
 
 }

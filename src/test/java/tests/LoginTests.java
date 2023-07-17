@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 public class LoginTests extends TestBase {
 
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void precon() {
         if (app.getUsers().isLogin()) {
             app.getUsers().logout();
@@ -115,7 +115,7 @@ public class LoginTests extends TestBase {
 //
 //        Assert.assertTrue(app.getUsers().isElementPresent(By.xpath("//*[.='Sign Out']")));
 //        app.getUsers().pause(5000);}
-    @Test
+    @Test(groups = {"smoke","sanity"})
     public void LoginPositTestBase() {
         User user = new User().withEmail("a@a1.ru").withPsw("DJS@sda1");
         app.getUsers().openLoginForm();
@@ -125,7 +125,7 @@ public class LoginTests extends TestBase {
 
         Assert.assertTrue(app.getUsers().isElementPresent(By.xpath("//*[.='Sign Out']")));
         app.getUsers().pause(5000);
-    }    @Test
+    }    @Test (groups = {"smoke"})
     public void LoginPositTestBaseLombok() {
         UserLombok userLom = UserLombok.builder().email("a@a1.ru").psw("DJS@sda1").build();
         app.getUsers().openLoginForm();

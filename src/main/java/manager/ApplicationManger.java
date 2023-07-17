@@ -3,6 +3,8 @@ package manager;
 import model.Contact;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,23 +26,36 @@ Logger logger= LoggerFactory.getLogger(ApplicationManger.class);
     public HelperContact getHelperContact() {
         return contact;
     }
+    String browser;
 
-    @BeforeSuite
+    public ApplicationManger(String browser) {
+        this.browser = browser;
+    }
+
+    @BeforeSuite(alwaysRun = true)
     public void init() {
 //        wd = new ChromeDriver();
-        wd=new EventFiringWebDriver(new ChromeDriver());
+        if (browser.equals(BrowserType.CHROME)){
+            wd=new EventFiringWebDriver(new ChromeDriver());
+        logger.info("Tests start on Chrome");}
+
+        else if(browser.equals(BrowserType.FIREFOX)){
+            wd=new EventFiringWebDriver(new FirefoxDriver());
+            logger.info("Tests start on Firefox");}
+
         wd.register(new WDListener());
        contact =new HelperContact(wd) ;
         users=new HelperUser(wd);
         wd.navigate().to("https://telranedu.web.app/home");
         wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
     }
 
 
-    @AfterSuite
+    @AfterSuite(alwaysRun = true)
     public void tears() {
 
-//        wd.quit();
+   wd.quit();
     }
 
 }
